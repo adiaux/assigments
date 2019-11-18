@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Result </title>
+   		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="style.css">
+    	<script src="script.js">
+</script>
+
+<style>
+	body {
+  background-image: url("http://getwallpapers.com/wallpaper/full/f/e/8/58252.jpg");
+  background-color: #2F2F31;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+  color: white;
+}
+body {
+  page-break-before: left;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  color: white;
+  font-family: 'Righteous';
+
+}
+h5 {
+  text-align: center;
+  color: white;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+body{
+    font-family: 'Righteous'
+}
+div.foo{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 8em;
+  margin: 0.2em;
+  position: relative;
+  color: #00B4F1;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #fff;
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+
+</style>
+    </head>	
+   
+    <body>
+    <div class="title">
+            <div class="container">
+                <div class="header">
+
+	<body>
+		<div class="animated  fadeIn delay-1s">
+		<div class="foo">
+  <span class="letter" data-letter="R">R</span>
+  <span class="letter" data-letter="E">E</span>
+  <span class="letter" data-letter="S">S</span>
+  <span class="letter" data-letter="U">U</span>
+  <span class="letter" data-letter="L">L</span>
+  <span class="letter" data-letter="T">T</span>
+
+
+<br>
+            
+
+  <h2>Centroid is :{{ centroid }} units</h1>
+  <h2>Moment of inertia is :{{ inertia }} units</h1>
+  <h2>Area is :{{ area }} units</h1>
+  <br>
+  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-success">Go back</button></a>
+</div>  
+</div>
+</div>
+</div>
+</div>
+</div>
+	</body>
+</html>

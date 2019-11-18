@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Polygon </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<style>
+		body {
+  background-image: url("http://getwallpapers.com/wallpaper/full/f/e/8/58252.jpg");
+  background-color: #2F2F31;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+  color: white;
+}
+body {
+  page-break-before: left;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+h2 {
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
+}
+h5 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+
+
+}
+.textit{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+    ;
+}
+div.foo{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 8em;
+  margin: 0.2em;
+  position: relative;
+  color: #00B4F1;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #fff;
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+		</style>
+	</head>
+	<body>
+		<div class="animated  fadeIn delay-1s">
+		<div class="foo">
+  <span class="letter" data-letter="P">P</span>
+  <span class="letter" data-letter="O">O</span>
+  <span class="letter" data-letter="L">L</span>
+  <span class="letter" data-letter="Y">Y</span>
+  <span class="letter" data-letter="G">G</span>
+  <span class="letter" data-letter="O">O</span>
+  <span class="letter" data-letter="N">N</span>
+</div>
+		<h5>Enter a polygon</h5>
+		<br>
+		<div class="col-xs-4 col-xs-offset-4">
+		<form method="POST">
+      <div class="textit">
+      <div class="form-group">
+		    <label for="text">Enter the number of sides of the polygon: </label>
+		    <input type="text" class="form-control" id="input" name="inputShape" placeholder="Enter sides" required><br>
+        <label for="text">Enter the coordinates of the polygon: </label>
+        <input type="text" class="form-control" id="input" name="inputX" placeholder="Enter X coordinates" required><br>
+        <input type="text" class="form-control" id="input" name="inputY" placeholder="Enter Y coordinates" required><br>
+      </div>
+    
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="{{ url_for('index') }}"><button type="button" class="btn btn-success">Go back</button></a>
+    </div>
+		</form>		
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</div>	
+</body>
+</html>
