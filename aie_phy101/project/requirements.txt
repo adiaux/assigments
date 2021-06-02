@@ -12,6 +12,6 @@ numpy==1.17.4
 opencv-python==4.1.1.26
 requests==2.22.0
 Shapely==1.6.4.post2
-urllib3==1.25.8
+urllib3==1.26.5
 Werkzeug==0.16.0
 WTForms==2.2.1
